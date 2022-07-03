@@ -25,7 +25,7 @@ extension UIColor {
 
     static var defaultBlue: UIColor {
         #if os(watchOS)
-        return UIColor(red: 21/255, green: 73/255, blue: 149/255, alpha: 1.0)
+        return UIColor(red: 10/255, green: 132/255, blue: 1.0, alpha: 1.0)
         #else
         return UIColor { (traits) -> UIColor in
             if traits.userInterfaceStyle == .dark {

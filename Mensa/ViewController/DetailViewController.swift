@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Darwin
 
 class DetailViewController: UIViewController {
 
@@ -15,12 +16,21 @@ class DetailViewController: UIViewController {
 
     private var sectionKeys: [Date] = []
 
+    private var filterObserverToken: NSKeyValueObservation?
+
     public init(location: Location) {
         self.location = location
         super.init(nibName: nil, bundle: nil)
 
         self.title = location.name
         self.navigationItem.largeTitleDisplayMode = .never
+
+        self.filterObserverToken = UserDefaults.standard.observe(\.filter, options: [.new, .old]) { [weak self] _, _ in
+            print("The settings changed!!!!!")
+            if let _ = self?.viewIfLoaded {
+                self?.refresh()
+            }
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -130,6 +140,10 @@ class DetailViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = false
         #endif
 
+        self.refresh()
+    }
+
+    public func refresh() {
         Task {
             do {
                 try await self.reloadData()
@@ -143,10 +157,15 @@ class DetailViewController: UIViewController {
     public func reloadData() async throws {
         // Fetch all data from the server  and filter based on the location and date
         let rows = try await API.fetchRows()
+        let filter = UserDefaults.standard.filter
+
         let locationData = rows.filter { row in
             let today = Calendar.current.startOfDay(for: Date.now)
             let targetDate = Calendar.current.startOfDay(for: row.date)
-            return row.consumeLocation == self.location && targetDate.timeIntervalSince(today) >= 0
+            let isCorrectLocation = row.consumeLocation == self.location
+            let isTodayOrLater =  targetDate.timeIntervalSince(today) >= 0
+            let isInFilter = filter.check(menuIndicators: row.menuIndicators)
+            return isCorrectLocation && isTodayOrLater && isInFilter
         }
 
         // Group all entries by date

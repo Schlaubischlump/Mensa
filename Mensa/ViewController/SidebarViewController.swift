@@ -10,6 +10,7 @@ import UIKit
 #if targetEnvironment(macCatalyst)
 let kUseHeader = true
 #else
+import InAppSettingsKit
 let kUseHeader = false
 #endif
 
@@ -112,7 +113,23 @@ class SidebarViewController: UIViewController {
         self.dataSource?.apply(categorySnapshot, animatingDifferences: false)
 
         self.title = SidebarItem.header.title
+
+        #if !targetEnvironment(macCatalyst)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "gearshape.fill"),
+                                                                 style: .plain, target: self,
+                                                                 action: #selector(self.showSettings(sender:)))
+        #endif
     }
+
+    #if !targetEnvironment(macCatalyst)
+    @objc private func showSettings(sender: Any) {
+        let appSettingsViewController = IASKAppSettingsViewController()
+        appSettingsViewController.showDoneButton = true
+        appSettingsViewController.delegate = self
+        let navController = UINavigationController(rootViewController: appSettingsViewController)
+        self.present(navController, animated: true)
+    }
+    #endif
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -175,3 +192,11 @@ extension SidebarViewController: UICollectionViewDelegate {
         }
     }
 }
+
+#if !targetEnvironment(macCatalyst)
+extension SidebarViewController: IASKSettingsDelegate {
+    func settingsViewControllerDidEnd(_ settingsViewController: IASKAppSettingsViewController) {
+        self.dismiss(animated: true)
+    }
+}
+#endif

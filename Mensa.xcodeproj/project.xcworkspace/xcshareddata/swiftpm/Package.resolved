@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "inappsettingskit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/futuretap/InAppSettingsKit.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "6fb230172c69427aeaf92aef1a8f5188cbd2583d"
+      }
+    },
+    {
       "identity" : "swxmlhash",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/drmohundro/SWXMLHash",

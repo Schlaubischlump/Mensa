@@ -46,6 +46,9 @@
 		63971CC62871F68E00BC4C3F /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63971CC32871F68E00BC4C3F /* Collection+Extension.swift */; };
 		63971CCA2871F8FA00BC4C3F /* LocationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63971CC92871F8FA00BC4C3F /* LocationListView.swift */; };
 		63971CCC2871F91A00BC4C3F /* CounterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63971CCB2871F91A00BC4C3F /* CounterListView.swift */; };
+		63B32778287232A200F5D404 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 63B32777287232A200F5D404 /* Settings.bundle */; };
+		63B3277A2872341600F5D404 /* FoodFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B327792872341600F5D404 /* FoodFilter.swift */; };
+		63B3277D28723AEE00F5D404 /* InAppSettingsKit in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = 63B3277C28723AEE00F5D404 /* InAppSettingsKit */; };
 		63C55C57286E5C15009D84A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C55C56286E5C15009D84A4 /* Constants.swift */; };
 		63C55C58286E5C62009D84A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C55C56286E5C15009D84A4 /* Constants.swift */; };
 		63C55C59286E62B3009D84A4 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638A5078286E028800A8B743 /* UIColor+Extension.swift */; };
@@ -165,6 +168,8 @@
 		63971CC32871F68E00BC4C3F /* Collection+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
 		63971CC92871F8FA00BC4C3F /* LocationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListView.swift; sourceTree = "<group>"; };
 		63971CCB2871F91A00BC4C3F /* CounterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterListView.swift; sourceTree = "<group>"; };
+		63B32777287232A200F5D404 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		63B327792872341600F5D404 /* FoodFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodFilter.swift; sourceTree = "<group>"; };
 		63C55C56286E5C15009D84A4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		63E0AADF286B000900CCA745 /* Mensa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mensa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63E0AAE2286B000900CCA745 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -215,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63E0AAFA286B016100CCA745 /* SWXMLHash in Frameworks */,
+				63B3277D28723AEE00F5D404 /* InAppSettingsKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,12 +367,14 @@
 				63E0AAE2286B000900CCA745 /* AppDelegate.swift */,
 				63E0AAE4286B000900CCA745 /* SceneDelegate.swift */,
 				63F1609B287060FE009B066E /* DeepLinkRoute.swift */,
+				63B327792872341600F5D404 /* FoodFilter.swift */,
 				63E0AB05286B32B000CCA745 /* ViewController */,
 				63E0AAF7286B00E700CCA745 /* Model */,
 				63E0AB10286BA8FF00CCA745 /* Extension */,
 				63E0AAEB286B000C00CCA745 /* Assets.xcassets */,
 				63E0AAED286B000C00CCA745 /* LaunchScreen.storyboard */,
 				63E0AAF0286B000C00CCA745 /* Info.plist */,
+				63B32777287232A200F5D404 /* Settings.bundle */,
 			);
 			path = Mensa;
 			sourceTree = "<group>";
@@ -494,6 +502,7 @@
 			name = Mensa;
 			packageProductDependencies = (
 				63E0AAF9286B016100CCA745 /* SWXMLHash */,
+				63B3277C28723AEE00F5D404 /* InAppSettingsKit */,
 			);
 			productName = Mensa;
 			productReference = 63E0AADF286B000900CCA745 /* Mensa.app */;
@@ -535,6 +544,7 @@
 			mainGroup = 63E0AAD6286B000900CCA745;
 			packageReferences = (
 				63E0AAF8286B016100CCA745 /* XCRemoteSwiftPackageReference "SWXMLHash" */,
+				63B3277B28723AEE00F5D404 /* XCRemoteSwiftPackageReference "InAppSettingsKit" */,
 			);
 			productRefGroup = 63E0AAE0286B000900CCA745 /* Products */;
 			projectDirPath = "";
@@ -579,6 +589,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63E0AAEF286B000C00CCA745 /* LaunchScreen.storyboard in Resources */,
+				63B32778287232A200F5D404 /* Settings.bundle in Resources */,
 				63E0AAEC286B000C00CCA745 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -653,6 +664,7 @@
 				63E0AB09286B407800CCA745 /* DetailViewController.swift in Sources */,
 				63E0AB07286B32BE00CCA745 /* SidebarViewController.swift in Sources */,
 				63E0AB02286B09D900CCA745 /* Location.swift in Sources */,
+				63B3277A2872341600F5D404 /* FoodFilter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1093,6 +1105,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		63B3277B28723AEE00F5D404 /* XCRemoteSwiftPackageReference "InAppSettingsKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/futuretap/InAppSettingsKit.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		63E0AAF8286B016100CCA745 /* XCRemoteSwiftPackageReference "SWXMLHash" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/drmohundro/SWXMLHash";
@@ -1113,6 +1133,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 63E0AAF8286B016100CCA745 /* XCRemoteSwiftPackageReference "SWXMLHash" */;
 			productName = SWXMLHash;
+		};
+		63B3277C28723AEE00F5D404 /* InAppSettingsKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 63B3277B28723AEE00F5D404 /* XCRemoteSwiftPackageReference "InAppSettingsKit" */;
+			productName = InAppSettingsKit;
 		};
 		63E0AAF9286B016100CCA745 /* SWXMLHash */ = {
 			isa = XCSwiftPackageProductDependency;

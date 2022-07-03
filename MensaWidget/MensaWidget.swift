@@ -9,33 +9,6 @@ import WidgetKit
 import SwiftUI
 import Intents
 
-// MARK: - Helper
-
-/**
- Get a "Keine Ausgabe heute" data entry that is shown if no data is available.
- */
-func getNoFoodData(forEntry entry: MensaEntry) -> Row {
-
-    var counter: Counter = .one(1)
-    if let orderIndex = entry.counterOrder {
-        switch orderIndex {
-        case .one:      counter = .one(1)
-        case .two:      counter = .two(2)
-        case .three:    counter = .three(3)
-        case .four:     counter = .four(3)
-        default:        counter = .sideDishes(0)
-        }
-    }
-
-    return Row(
-        location: entry.location,
-        consumeLocation: entry.location,
-        counter: counter,
-        date: Date(),
-        description: "Keine Ausgabe heute."
-    )
-}
-
 
 // MARK: - Provider
 
@@ -147,7 +120,12 @@ struct MensaWidgetEntryView : View {
 
         // Use a "Keine Ausgabe" placeholder if no data is found
         if data.isEmpty {
-            return [getNoFoodData(forEntry: self.entry)]
+            let location = entry.location
+            let counter = entry.counterOrder?.defaultCounter ?? .one(0)
+            return [
+                Row(location: location, consumeLocation: location, counter: counter, date: .now,
+                    description: "Keine Ausgabe heute.")
+            ]
         }
 
         // Only return the minimum amount of allowed rows depending on the widget family
@@ -187,15 +165,14 @@ struct MensaWidgetEntryView : View {
                     let row = data[i]
                     let lastRow = data[safe: i-1]
                     let insertTitle = row.counter.name != lastRow?.counter.name
-                    // Counter name
+
                     if insertTitle {
+                        // Counter name
                         Text(row.counter.name)
                             .font(font)
                             .foregroundColor(Color(uiColor: .defaultBlue))
                             .frame(maxWidth: .infinity, alignment: .leading)
-                    }
-                    // Divider
-                    if !insertTitle {
+                    } else {
                         Divider()
                             .frame(height: 1.5)
                             .background(Color(uiColor: .defaultGreen))

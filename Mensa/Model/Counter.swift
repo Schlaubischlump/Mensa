@@ -14,6 +14,16 @@ enum OrderIndex: Int {
     case three = 2
     case four = 3
     case side = 4
+
+    public var defaultCounter: Counter {
+        switch self {
+        case .one:      return .one(1)
+        case .two:      return .two(2)
+        case .three:    return .three(3)
+        case .four:     return .four(4)
+        default:        return .sideDishes(0)
+        }
+    }
 }
 
 enum Counter: RawRepresentable, Hashable {

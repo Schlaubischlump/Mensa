@@ -17,8 +17,8 @@ let kFilterKey = "filter"
     private var menuIndicatorString: String? {
         switch self {
         case .all: return nil
-        case .veggi: return "veggi"
-        case .vegan: return "vegan"
+        case .veggi: return "Veggi"
+        case .vegan: return "Vegan"
         }
     }
 

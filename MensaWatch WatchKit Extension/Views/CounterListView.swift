@@ -71,12 +71,16 @@ struct CounterListView: View {
 
     func getData() async -> [Date: [Row]] {
         var data: [Row] = (try? await API.fetchRows()) ?? []
+        let filter = UserDefaults.standard.filter
 
         // Filter data based on location and current date
         data = data.filter { row in
-            let today = Calendar.current.startOfDay(for: .now)
+            let today = Calendar.current.startOfDay(for: Date.now)
             let targetDate = Calendar.current.startOfDay(for: row.date)
-            return row.consumeLocation == location && targetDate.timeIntervalSince(today) >= 0
+            let isCorrectLocation = row.consumeLocation == self.location
+            let isTodayOrLater =  targetDate.timeIntervalSince(today) >= 0
+            let isInFilter = filter.check(menuIndicators: row.menuIndicators)
+            return isCorrectLocation && isTodayOrLater && isInFilter
         }
 
         return Dictionary(grouping: data) { $0.date }

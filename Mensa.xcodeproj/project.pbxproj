@@ -36,6 +36,9 @@
 		638D625A286DEFEF0055F5D7 /* MensaWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 638D6256286DEFEC0055F5D7 /* MensaWidget.intentdefinition */; };
 		638D625B286DEFEF0055F5D7 /* MensaWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 638D6256286DEFEC0055F5D7 /* MensaWidget.intentdefinition */; };
 		638D625E286DEFEF0055F5D7 /* MensaWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 638D624D286DEFEC0055F5D7 /* MensaWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		638EC03028732D8A006A96EC /* SettingsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638EC02F28732D8A006A96EC /* SettingsListView.swift */; };
+		638EC0322873327D006A96EC /* FoodFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B327792872341600F5D404 /* FoodFilter.swift */; };
+		638EC03428733287006A96EC /* FoodFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638EC03328733287006A96EC /* FoodFilter.swift */; };
 		63971CBA2871F37600BC4C3F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63971CB52871F37600BC4C3F /* Location.swift */; };
 		63971CBB2871F37600BC4C3F /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63971CB62871F37600BC4C3F /* Field.swift */; };
 		63971CBC2871F37600BC4C3F /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63971CB72871F37600BC4C3F /* Counter.swift */; };
@@ -47,7 +50,6 @@
 		63971CCA2871F8FA00BC4C3F /* LocationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63971CC92871F8FA00BC4C3F /* LocationListView.swift */; };
 		63971CCC2871F91A00BC4C3F /* CounterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63971CCB2871F91A00BC4C3F /* CounterListView.swift */; };
 		63B32778287232A200F5D404 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 63B32777287232A200F5D404 /* Settings.bundle */; };
-		63B3277A2872341600F5D404 /* FoodFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B327792872341600F5D404 /* FoodFilter.swift */; };
 		63B3277D28723AEE00F5D404 /* InAppSettingsKit in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = 63B3277C28723AEE00F5D404 /* InAppSettingsKit */; };
 		63C55C57286E5C15009D84A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C55C56286E5C15009D84A4 /* Constants.swift */; };
 		63C55C58286E5C62009D84A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C55C56286E5C15009D84A4 /* Constants.swift */; };
@@ -159,6 +161,8 @@
 		638D6257286DEFEF0055F5D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		638D6259286DEFEF0055F5D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		638D625F286DEFEF0055F5D7 /* MensaWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MensaWidgetExtension.entitlements; sourceTree = "<group>"; };
+		638EC02F28732D8A006A96EC /* SettingsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsListView.swift; sourceTree = "<group>"; };
+		638EC03328733287006A96EC /* FoodFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodFilter.swift; path = Mensa/FoodFilter.swift; sourceTree = SOURCE_ROOT; };
 		63971CB52871F37600BC4C3F /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		63971CB62871F37600BC4C3F /* Field.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
 		63971CB72871F37600BC4C3F /* Counter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
@@ -238,6 +242,7 @@
 		6305E43D2871F1AF000C885A /* MensaWatch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				638EC03328733287006A96EC /* FoodFilter.swift */,
 				63971CC12871F68E00BC4C3F /* Extension */,
 				63971CB42871F37600BC4C3F /* Model */,
 				63971CC82871F8E200BC4C3F /* Views */,
@@ -332,6 +337,7 @@
 			children = (
 				63971CC92871F8FA00BC4C3F /* LocationListView.swift */,
 				63971CCB2871F91A00BC4C3F /* CounterListView.swift */,
+				638EC02F28732D8A006A96EC /* SettingsListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -603,12 +609,14 @@
 			files = (
 				63971CBC2871F37600BC4C3F /* Counter.swift in Sources */,
 				63971CC62871F68E00BC4C3F /* Collection+Extension.swift in Sources */,
+				638EC03028732D8A006A96EC /* SettingsListView.swift in Sources */,
 				6305E4612871F1D9000C885A /* MensaApp.swift in Sources */,
 				63971CC52871F68E00BC4C3F /* UIColor+Extension.swift in Sources */,
 				63971CBA2871F37600BC4C3F /* Location.swift in Sources */,
 				63971CBB2871F37600BC4C3F /* Field.swift in Sources */,
 				63971CCC2871F91A00BC4C3F /* CounterListView.swift in Sources */,
 				63971CBD2871F37600BC4C3F /* API.swift in Sources */,
+				638EC03428733287006A96EC /* FoodFilter.swift in Sources */,
 				63971CBE2871F37600BC4C3F /* Row.swift in Sources */,
 				63971CCA2871F8FA00BC4C3F /* LocationListView.swift in Sources */,
 			);
@@ -662,9 +670,9 @@
 				63E0AAFC286B021A00CCA745 /* API.swift in Sources */,
 				63C55C57286E5C15009D84A4 /* Constants.swift in Sources */,
 				63E0AB09286B407800CCA745 /* DetailViewController.swift in Sources */,
+				638EC0322873327D006A96EC /* FoodFilter.swift in Sources */,
 				63E0AB07286B32BE00CCA745 /* SidebarViewController.swift in Sources */,
 				63E0AB02286B09D900CCA745 /* Location.swift in Sources */,
-				63B3277A2872341600F5D404 /* FoodFilter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

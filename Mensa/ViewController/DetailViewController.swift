@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Darwin
 
 class DetailViewController: UIViewController {
 

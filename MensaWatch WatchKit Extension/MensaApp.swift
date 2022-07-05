@@ -13,6 +13,13 @@ struct MensaApp: App {
         WindowGroup {
             NavigationView {
                 LocationsListView()
+                    .toolbar {
+                        ToolbarItem(placement: .confirmationAction) {
+                            NavigationLink(destination: SettingsListView()) {
+                                Image(systemName: "gearshape.fill")
+                            }
+                        }
+                    }
             }
         }
     }

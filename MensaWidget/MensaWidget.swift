@@ -137,68 +137,77 @@ struct MensaWidgetEntryView : View {
     }
 
     var body: some View {
-        ZStack {
-            // Create a green border around the widget
-            Color(uiColor: .defaultGreen)
+        let borderSize = 4.0
+        GeometryReader { geo in
+            ZStack() {
+                // Create a green border around the widget
+                Color(uiColor: .defaultGreen)
 
-            VStack(alignment: .leading, spacing: 4) {
+                // Draw the inner content background
+                ContainerRelativeShape()
+                    .fill(Color(uiColor: .defaultBackground))
+                    .frame(width: geo.size.width-borderSize*2, height: geo.size.height-borderSize*2, alignment: .center)
 
-                let location = entry.location
-                let data = self.getDataForSupportedFamily()
-                let font = Font.system(size: 13)
+                VStack(alignment: .leading, spacing: 4) {
 
-                // Location Name
-                Label(title: {
-                    Text(location.name)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                }, icon: {
-                    Image(uiImage: location.icon!)
-                        .renderingMode(.template)
-                        .resizable()
-                        .frame(width: 15.0, height: 15.0)
-                }).foregroundColor(.init(uiColor: .defaultBlue))
-                    .font(font.weight(.bold))
-                    .lineLimit(1)
-                    .padding([.bottom], 2)
+                    let location = entry.location
+                    let data = self.getDataForSupportedFamily()
+                    let font = Font.system(size: 13)
 
-                ForEach((0..<data.count), id:\.self) { i in
-                    let row = data[i]
-                    let lastRow = data[safe: i-1]
-                    let insertTitle = row.counter.name != lastRow?.counter.name
-
-                    if insertTitle {
-                        // Counter name
-                        Text(row.counter.name)
-                            .font(font)
-                            .foregroundColor(Color(uiColor: .defaultBlue))
+                    // Location Name
+                    Label(title: {
+                        Text(location.name)
                             .frame(maxWidth: .infinity, alignment: .leading)
-                    } else {
-                        Divider()
-                            .frame(height: 1.5)
-                            .background(Color(uiColor: .defaultGreen))
-                    }
-                    // Food description
-                    Text(row.description)
-                        .foregroundColor(.secondary)
-                        .font(font)
-                    // Food price and additives
-                    HStack(alignment: .top, spacing: 2) {
-                        if let priceString = row.getPriceString() {
-                            Text(priceString)
+                    }, icon: {
+                        Image(uiImage: location.icon!)
+                            .renderingMode(.template)
+                            .resizable()
+                            .frame(width: 15.0, height: 15.0)
+                    }).foregroundColor(.init(uiColor: .defaultBlue))
+                        .font(font.weight(.bold))
+                        .lineLimit(1)
+                        .padding([.bottom], 2)
+
+                    ForEach((0..<data.count), id:\.self) { i in
+                        let row = data[i]
+                        let lastRow = data[safe: i-1]
+                        let insertTitle = row.counter.name != lastRow?.counter.name
+
+                        if insertTitle {
+                            // Counter name
+                            Text(row.counter.name)
                                 .font(font)
+                                .foregroundColor(Color(uiColor: .defaultBlue))
                                 .frame(maxWidth: .infinity, alignment: .leading)
-                                .foregroundColor(Color(uiColor: .tertiaryLabel))
+                                .lineLimit(1)
+                        } else {
+                            Divider()
+                                .frame(height: 1.5)
+                                .background(Color(uiColor: .defaultGreen))
                         }
-                        Spacer()
-                        Text(row.getAdditivesText(short: true))
+                        // Food description
+                        Text(row.description)
+                            .foregroundColor(.secondary)
                             .font(font)
-                            .frame(maxWidth: 44, alignment: .trailing)
+                        // Food price and additives
+                        HStack(alignment: .top, spacing: 2) {
+                            if let priceString = row.getPriceString() {
+                                Text(priceString)
+                                    .font(font)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .foregroundColor(Color(uiColor: .tertiaryLabel))
+                                    .lineLimit(1)
+                            }
+                            Spacer()
+                            Text(row.getAdditivesText(short: true))
+                                .font(font)
+                                .frame(maxWidth: 44, alignment: .trailing)
+                                .lineLimit(1)
+                        }
                     }
-                }
-                Spacer(minLength: 0)
-            }.padding()
-             .background(Color(uiColor: .defaultBackground))
-             .clipShape(ContainerRelativeShape().inset(by: 4))
+                    Spacer(minLength: 0)
+                }.padding()
+            }.frame(width: geo.size.width, height: geo.size.height, alignment: .center)
         }
     }
 }

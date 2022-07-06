@@ -8,7 +8,7 @@
 import UIKit
 
 class DetailCell: UICollectionViewCell {
-    public private(set) var detailContent = DetailContentView(frame: .zero)
+    public private(set) var detailContent = DetailContentView()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -20,8 +20,14 @@ class DetailCell: UICollectionViewCell {
         content.addSubview(self.detailContent)
 
         let pad = UIFloat(10.0)
+
         self.detailContent.translatesAutoresizingMaskIntoConstraints = false
-        self.detailContent.topAnchor.constraint(equalTo: content.topAnchor, constant: pad).isActive = true
+
+        // Fix Layout constraint conflict
+        let topAnchorConstraint = self.detailContent.topAnchor.constraint(equalTo: content.topAnchor, constant: pad)
+        topAnchorConstraint.priority = .defaultHigh
+        topAnchorConstraint.isActive = true
+
         self.detailContent.bottomAnchor.constraint(equalTo: content.bottomAnchor, constant: -pad).isActive = true
         self.detailContent.leadingAnchor.constraint(equalTo: content.leadingAnchor, constant: pad*2).isActive = true
         self.detailContent.trailingAnchor.constraint(equalTo: content.trailingAnchor, constant: -pad*2).isActive = true

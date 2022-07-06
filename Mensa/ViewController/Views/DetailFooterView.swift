@@ -8,7 +8,7 @@
 import UIKit
 
 class DetailFooterView: UICollectionReusableView {
-    public private(set) var detailContent = DetailContentView(frame: .zero)
+    public private(set) var detailContent = DetailContentView()
 
     public var indexPath: IndexPath?
 
@@ -22,7 +22,12 @@ class DetailFooterView: UICollectionReusableView {
 
         let pad = UIFloat(10.0)
         self.detailContent.translatesAutoresizingMaskIntoConstraints = false
-        self.detailContent.topAnchor.constraint(equalTo: self.topAnchor, constant: pad).isActive = true
+
+        // Fix Layout constraint conflict
+        let topAnchorConstraint = self.detailContent.topAnchor.constraint(equalTo: self.topAnchor, constant: pad)
+        topAnchorConstraint.priority = .defaultHigh
+        topAnchorConstraint.isActive = true
+
         self.detailContent.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -pad).isActive = true
         self.detailContent.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: pad*2).isActive = true
         self.detailContent.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -pad*2).isActive = true

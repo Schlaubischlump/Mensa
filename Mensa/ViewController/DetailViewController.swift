@@ -25,7 +25,6 @@ class DetailViewController: UIViewController {
         self.navigationItem.largeTitleDisplayMode = .never
 
         self.filterObserverToken = UserDefaults.standard.observe(\.filter, options: [.new, .old]) { [weak self] _, _ in
-            print("The settings changed!!!!!")
             if let _ = self?.viewIfLoaded {
                 self?.refresh()
             }

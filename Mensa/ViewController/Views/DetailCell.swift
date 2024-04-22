@@ -25,7 +25,7 @@ class DetailCell: UICollectionViewCell {
 
         // Fix Layout constraint conflict
         let topAnchorConstraint = self.detailContent.topAnchor.constraint(equalTo: content.topAnchor, constant: pad)
-        topAnchorConstraint.priority = .defaultHigh
+        topAnchorConstraint.priority = .required
         topAnchorConstraint.isActive = true
 
         self.detailContent.bottomAnchor.constraint(equalTo: content.bottomAnchor, constant: -pad).isActive = true

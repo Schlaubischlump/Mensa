@@ -137,12 +137,12 @@ struct MensaWidgetEntryView : View {
     }
 
     var body: some View {
+        // Create a green border around the widget
         let borderSize = 4.0
-        GeometryReader { geo in
+        let main = GeometryReader { geo in
             ZStack() {
-                // Create a green border around the widget
                 Color(uiColor: .defaultGreen)
-
+                
                 // Draw the inner content background
                 ContainerRelativeShape()
                     .fill(Color(uiColor: .defaultBackground))
@@ -209,6 +209,18 @@ struct MensaWidgetEntryView : View {
                 }.padding()
             }.frame(width: geo.size.width, height: geo.size.height, alignment: .center)
         }
+        if #available(macCatalystApplicationExtension 17.0, *) {
+            if #available(iOSApplicationExtension 17.0, *) {
+                main.containerBackground(for: .widget) {
+                    Color(.defaultBackground)
+                }
+            } else {
+                main
+            }
+        } else {
+            // Fallback on earlier versions
+            main
+        }
     }
 }
 
@@ -223,6 +235,7 @@ struct MensaWidget: Widget {
         }
         .configurationDisplayName("Speiseplan")
         .description("Speiseplan der Mensa.")
+        .contentMarginsDisabled()
     }
 }
 

@@ -8,14 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		6305E4342871F1AF000C885A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6305E4332871F1AF000C885A /* Assets.xcassets */; };
-		6305E43A2871F1AF000C885A /* MensaWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6305E4392871F1AF000C885A /* MensaWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6305E4492871F1B1000C885A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6305E4482871F1B1000C885A /* Assets.xcassets */; };
 		6305E44C2871F1B1000C885A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6305E44B2871F1B1000C885A /* Preview Assets.xcassets */; };
 		6305E4512871F1B1000C885A /* Mensa.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 6305E4312871F1AD000C885A /* Mensa.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6305E4612871F1D9000C885A /* MensaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6305E45C2871F1D9000C885A /* MensaApp.swift */; };
 		638A5066286DF8DE00A8B743 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638A5061286DF8DE00A8B743 /* Location.swift */; };
 		638A5067286DF8DE00A8B743 /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638A5062286DF8DE00A8B743 /* Field.swift */; };
-		638A5068286DF8DE00A8B743 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638A5063286DF8DE00A8B743 /* Counter.swift */; };
 		638A5069286DF8DE00A8B743 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638A5064286DF8DE00A8B743 /* API.swift */; };
 		638A506A286DF8DE00A8B743 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638A5065286DF8DE00A8B743 /* Row.swift */; };
 		638A506B286DF8EA00A8B743 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638A5061286DF8DE00A8B743 /* Location.swift */; };
@@ -24,9 +22,7 @@
 		638A506E286DF8EA00A8B743 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638A5064286DF8DE00A8B743 /* API.swift */; };
 		638A506F286DF8EA00A8B743 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638A5065286DF8DE00A8B743 /* Row.swift */; };
 		638A5073286DF98900A8B743 /* SWXMLHash in Frameworks */ = {isa = PBXBuildFile; productRef = 638A5072286DF98900A8B743 /* SWXMLHash */; };
-		638A507B286E028800A8B743 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638A5078286E028800A8B743 /* UIColor+Extension.swift */; };
 		638A507C286E028800A8B743 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638A5079286E028800A8B743 /* Collection+Extension.swift */; };
-		638A507D286E028800A8B743 /* UIKit+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638A507A286E028800A8B743 /* UIKit+Extension.swift */; };
 		638A507E286E029900A8B743 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638A5079286E028800A8B743 /* Collection+Extension.swift */; };
 		638A5080286E02A700A8B743 /* UIKit+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638A507A286E028800A8B743 /* UIKit+Extension.swift */; };
 		638D6250286DEFEC0055F5D7 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638D624F286DEFEC0055F5D7 /* WidgetKit.framework */; };
@@ -60,10 +56,6 @@
 		63E0AAEC286B000C00CCA745 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63E0AAEB286B000C00CCA745 /* Assets.xcassets */; };
 		63E0AAEF286B000C00CCA745 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63E0AAED286B000C00CCA745 /* LaunchScreen.storyboard */; };
 		63E0AAFA286B016100CCA745 /* SWXMLHash in Frameworks */ = {isa = PBXBuildFile; productRef = 63E0AAF9286B016100CCA745 /* SWXMLHash */; };
-		63E0AAFC286B021A00CCA745 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E0AAFB286B021A00CCA745 /* API.swift */; };
-		63E0AAFE286B037300CCA745 /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E0AAFD286B037300CCA745 /* Field.swift */; };
-		63E0AB00286B096700CCA745 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E0AAFF286B096700CCA745 /* Row.swift */; };
-		63E0AB02286B09D900CCA745 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E0AB01286B09D900CCA745 /* Location.swift */; };
 		63E0AB04286B0AA500CCA745 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E0AB03286B0AA500CCA745 /* Counter.swift */; };
 		63E0AB07286B32BE00CCA745 /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E0AB06286B32BE00CCA745 /* SidebarViewController.swift */; };
 		63E0AB09286B407800CCA745 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E0AB08286B407800CCA745 /* DetailViewController.swift */; };
@@ -72,19 +64,11 @@
 		63E0AB19286BAC9300CCA745 /* DetailFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E0AB18286BAC9300CCA745 /* DetailFooterView.swift */; };
 		63E0AB1B286BB0CF00CCA745 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E0AB1A286BB0CF00CCA745 /* UIColor+Extension.swift */; };
 		63E0AB1D286BB32100CCA745 /* DetailContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E0AB1C286BB32100CCA745 /* DetailContentView.swift */; };
-		63E0AB1F286C319E00CCA745 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E0AB1E286C319E00CCA745 /* Collection+Extension.swift */; };
 		63E0AB21286C35C500CCA745 /* DetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E0AB20286C35C500CCA745 /* DetailHeaderView.swift */; };
 		63F1609C287060FE009B066E /* DeepLinkRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F1609B287060FE009B066E /* DeepLinkRoute.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6305E43B2871F1AF000C885A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 63E0AAD7286B000900CCA745 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6305E4382871F1AF000C885A;
-			remoteInfo = "MensaWatch WatchKit Extension";
-		};
 		6305E44F2871F1B1000C885A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 63E0AAD7286B000900CCA745 /* Project object */;
@@ -102,17 +86,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		6305E4552871F1B1000C885A /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				6305E43A2871F1AF000C885A /* MensaWatch WatchKit Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6305E4592871F1B1000C885A /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -140,7 +113,6 @@
 /* Begin PBXFileReference section */
 		6305E4312871F1AD000C885A /* Mensa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mensa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6305E4332871F1AF000C885A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6305E4392871F1AF000C885A /* MensaWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MensaWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6305E4482871F1B1000C885A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6305E44B2871F1B1000C885A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6305E44D2871F1B1000C885A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -361,7 +333,6 @@
 				63E0AADF286B000900CCA745 /* Mensa.app */,
 				638D624D286DEFEC0055F5D7 /* MensaWidgetExtension.appex */,
 				6305E4312871F1AD000C885A /* Mensa.app */,
-				6305E4392871F1AF000C885A /* MensaWatch WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -437,37 +408,20 @@
 			buildConfigurationList = 6305E4562871F1B1000C885A /* Build configuration list for PBXNativeTarget "MensaWatch" */;
 			buildPhases = (
 				6305E42F2871F1AD000C885A /* Resources */,
-				6305E4552871F1B1000C885A /* Embed App Extensions */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6305E43C2871F1AF000C885A /* PBXTargetDependency */,
-			);
-			name = MensaWatch;
-			productName = MensaWatch;
-			productReference = 6305E4312871F1AD000C885A /* Mensa.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		6305E4382871F1AF000C885A /* MensaWatch WatchKit Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6305E4522871F1B1000C885A /* Build configuration list for PBXNativeTarget "MensaWatch WatchKit Extension" */;
-			buildPhases = (
 				6305E4352871F1AF000C885A /* Sources */,
 				6305E4362871F1AF000C885A /* Frameworks */,
-				6305E4372871F1AF000C885A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "MensaWatch WatchKit Extension";
+			name = MensaWatch;
 			packageProductDependencies = (
-				63971CBF2871F3E600BC4C3F /* SWXMLHash */,
+				630BE6792BD6FB040067A228 /* SWXMLHash */,
 			);
-			productName = "MensaWatch WatchKit Extension";
-			productReference = 6305E4392871F1AF000C885A /* MensaWatch WatchKit Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
+			productName = MensaWatch;
+			productReference = 6305E4312871F1AD000C885A /* Mensa.app */;
+			productType = "com.apple.product-type.application";
 		};
 		638D624C286DEFEC0055F5D7 /* MensaWidgetExtension */ = {
 			isa = PBXNativeTarget;
@@ -522,14 +476,10 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1340;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					6305E4302871F1AD000C885A = {
 						CreatedOnToolsVersion = 13.4.1;
-					};
-					6305E4382871F1AF000C885A = {
-						CreatedOnToolsVersion = 13.4.1;
-						LastSwiftMigration = 1340;
 					};
 					638D624C286DEFEC0055F5D7 = {
 						CreatedOnToolsVersion = 14.0;
@@ -559,7 +509,6 @@
 				63E0AADE286B000900CCA745 /* Mensa */,
 				638D624C286DEFEC0055F5D7 /* MensaWidgetExtension */,
 				6305E4302871F1AD000C885A /* MensaWatch */,
-				6305E4382871F1AF000C885A /* MensaWatch WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -569,16 +518,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6305E4342871F1AF000C885A /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6305E4372871F1AF000C885A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 				6305E44C2871F1B1000C885A /* Preview Assets.xcassets in Resources */,
 				6305E4492871F1B1000C885A /* Assets.xcassets in Resources */,
+				6305E4342871F1AF000C885A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,16 +587,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				63E0AB04286B0AA500CCA745 /* Counter.swift in Sources */,
-				638A5068286DF8DE00A8B743 /* Counter.swift in Sources */,
 				638A5066286DF8DE00A8B743 /* Location.swift in Sources */,
 				638A506A286DF8DE00A8B743 /* Row.swift in Sources */,
 				63E0AB12286BA90B00CCA745 /* UIKit+Extension.swift in Sources */,
 				63F1609C287060FE009B066E /* DeepLinkRoute.swift in Sources */,
 				63E0AB15286BAA2A00CCA745 /* DetailCell.swift in Sources */,
-				638A507D286E028800A8B743 /* UIKit+Extension.swift in Sources */,
 				638A5067286DF8DE00A8B743 /* Field.swift in Sources */,
 				63E0AB19286BAC9300CCA745 /* DetailFooterView.swift in Sources */,
-				63E0AAFE286B037300CCA745 /* Field.swift in Sources */,
 				638A507C286E028800A8B743 /* Collection+Extension.swift in Sources */,
 				638D625B286DEFEF0055F5D7 /* MensaWidget.intentdefinition in Sources */,
 				63E0AAE7286B000900CCA745 /* SplitViewController.swift in Sources */,
@@ -662,28 +601,18 @@
 				63E0AB21286C35C500CCA745 /* DetailHeaderView.swift in Sources */,
 				63E0AAE5286B000900CCA745 /* SceneDelegate.swift in Sources */,
 				63E0AB1B286BB0CF00CCA745 /* UIColor+Extension.swift in Sources */,
-				638A507B286E028800A8B743 /* UIColor+Extension.swift in Sources */,
 				638A5069286DF8DE00A8B743 /* API.swift in Sources */,
-				63E0AB00286B096700CCA745 /* Row.swift in Sources */,
-				63E0AB1F286C319E00CCA745 /* Collection+Extension.swift in Sources */,
 				63E0AB1D286BB32100CCA745 /* DetailContentView.swift in Sources */,
-				63E0AAFC286B021A00CCA745 /* API.swift in Sources */,
 				63C55C57286E5C15009D84A4 /* Constants.swift in Sources */,
 				63E0AB09286B407800CCA745 /* DetailViewController.swift in Sources */,
 				638EC0322873327D006A96EC /* FoodFilter.swift in Sources */,
 				63E0AB07286B32BE00CCA745 /* SidebarViewController.swift in Sources */,
-				63E0AB02286B09D900CCA745 /* Location.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6305E43C2871F1AF000C885A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6305E4382871F1AF000C885A /* MensaWatch WatchKit Extension */;
-			targetProxy = 6305E43B2871F1AF000C885A /* PBXContainerItemProxy */;
-		};
 		6305E4502871F1B1000C885A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			platformFilter = ios;
@@ -709,86 +638,26 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		6305E4532871F1B1000C885A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MensaWatch WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = YJ8XYES89R;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "MensaWatch WatchKit Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "MensaWatch WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = MensaWatch_WatchKit_Extension.ComplicationController;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = de.davidklopp.Mensa.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.0;
-			};
-			name = Debug;
-		};
-		6305E4542871F1B1000C885A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MensaWatch WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = YJ8XYES89R;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "MensaWatch WatchKit Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "MensaWatch WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = MensaWatch_WatchKit_Extension.ComplicationController;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = de.davidklopp.Mensa.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.0;
-			};
-			name = Release;
-		};
 		6305E4572871F1B1000C885A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YJ8XYES89R;
 				GENERATE_INFOPLIST_FILE = YES;
-				IBSC_MODULE = MensaWatch_WatchKit_Extension;
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = de.davidklopp.Mensa;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = de.davidklopp.Mensa.watchkitapp;
 				PRODUCT_NAME = Mensa;
@@ -806,14 +675,21 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YJ8XYES89R;
 				GENERATE_INFOPLIST_FILE = YES;
-				IBSC_MODULE = MensaWatch_WatchKit_Extension;
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = de.davidklopp.Mensa;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = de.davidklopp.Mensa.watchkitapp;
 				PRODUCT_NAME = Mensa;
@@ -922,6 +798,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -982,6 +859,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1065,15 +943,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6305E4522871F1B1000C885A /* Build configuration list for PBXNativeTarget "MensaWatch WatchKit Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6305E4532871F1B1000C885A /* Debug */,
-				6305E4542871F1B1000C885A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		6305E4562871F1B1000C885A /* Build configuration list for PBXNativeTarget "MensaWatch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1132,6 +1001,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		630BE6792BD6FB040067A228 /* SWXMLHash */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 63E0AAF8286B016100CCA745 /* XCRemoteSwiftPackageReference "SWXMLHash" */;
+			productName = SWXMLHash;
+		};
 		638A5072286DF98900A8B743 /* SWXMLHash */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 63E0AAF8286B016100CCA745 /* XCRemoteSwiftPackageReference "SWXMLHash" */;

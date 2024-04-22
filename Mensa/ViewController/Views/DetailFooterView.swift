@@ -25,7 +25,7 @@ class DetailFooterView: UICollectionReusableView {
 
         // Fix Layout constraint conflict
         let topAnchorConstraint = self.detailContent.topAnchor.constraint(equalTo: self.topAnchor, constant: pad)
-        topAnchorConstraint.priority = .defaultHigh
+        topAnchorConstraint.priority = .required
         topAnchorConstraint.isActive = true
 
         self.detailContent.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -pad).isActive = true

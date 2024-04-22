@@ -54,9 +54,9 @@ enum Counter: RawRepresentable, Hashable {
             self = .topping(rawValue)
         case 110, 112, 113, 150, 158, 160, 170, 190, 203, 304, 401, 800, 802, 830, 832, 820, 840, 841:
             self = .one(rawValue)
-        case 120, 151, 161, 192, 300, 807, 831, 833:
+        case 120, 121, 151, 161, 192, 300, 807, 831, 833:
             self = .two(rawValue)
-        case 130, 803:
+        case 130, 131, 803:
             self = .three(rawValue)
         case 140, 142:
             self = .four(rawValue)
@@ -88,26 +88,26 @@ enum Counter: RawRepresentable, Hashable {
         case .snack(let rawValue):                fallthrough
         case .sideDishes(let rawValue):           fallthrough
         case .ignore(let rawValue):               fallthrough
-        case .special(let rawValue):             fallthrough
+        case .special(let rawValue):              fallthrough
         case .unknown(let rawValue):              return rawValue
         }
     }
 
     var name: String {
         switch self {
-        case .soupOfTheDay:         return "Tagessuppe"
-        case .sideDishes:           return "Beilagen"
-        case .stew:                 return "Eintopf"
-        case .topping:              return "Topping"
-        case .one:                  return "Ausgabe 1"
-        case .two:                  return "Ausgabe 2"
-        case .three:                return "Ausgabe 3"
-        case .four:                 return "Ausgabe 4"
-        case .dishOfTheDay:         return "Tagesessen"
-        case .wok:                  return "Wok"
-        case .snack:                return "Snacken"
-        case .special:              return "Spezial-Aktion"
-        case .ignore:               return "Ignore \(rawValue)"
+        case .soupOfTheDay:          return "Tagessuppe"
+        case .sideDishes:            return "Beilagen"
+        case .stew:                  return "Eintopf"
+        case .topping:               return "Topping"
+        case .one:                   return "Ausgabe 1"
+        case .two:                   return "Ausgabe 2"
+        case .three:                 return "Ausgabe 3"
+        case .four:                  return "Ausgabe 4"
+        case .dishOfTheDay:          return "Tagesessen"
+        case .wok:                   return "Wok"
+        case .snack:                 return "Snacken"
+        case .special:               return "Spezial-Aktion"
+        case .ignore:                return "Ignore \(rawValue)"
         case .unknown(let rawValue): return "Unknown \(rawValue)"
         }
     }
@@ -125,7 +125,7 @@ enum Counter: RawRepresentable, Hashable {
         case .dishOfTheDay:         return .two
         case .wok:                  return .one
         case .snack:                return .side
-        case .special:             return .one
+        case .special:              return .one
         case .unknown:              return .ignore
         case .ignore:               return .ignore
         }
